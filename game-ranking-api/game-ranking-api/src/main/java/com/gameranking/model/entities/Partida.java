@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Collection;
+import java.util.List;
 
 @Builder
 @Data
@@ -23,7 +23,7 @@ public class Partida {
     @Column(name = "IDPARTIDA")
     private Integer idPartida;
 
-    @Column(name = "DTINIC", columnDefinition = "timestamp default sysdate")
+    @Column(name = "DTINIC")
     private Timestamp dtInicio;
 
     @Column(name = "DTFIM")
@@ -35,5 +35,5 @@ public class Partida {
 
     @OneToMany
     @JoinColumn(name = "IDPARTIDA")
-    private Collection<JogadorPartida> jogadores;
+    private List<JogadorPartida> jogadores;
 }

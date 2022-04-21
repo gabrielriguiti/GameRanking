@@ -25,5 +25,21 @@ public class Jogador {
     private Integer qtdPartidas;
 
     @Column(name = "QTDVITORIAS", columnDefinition = "integer default 0")
-    private Integer qtdJogadores;
+    private Integer qtdVitorias;
+
+    public Integer getQtdPartidas() {
+        if (qtdPartidas == null) {
+            return 0;
+        } else {
+            return qtdPartidas;
+        }
+    }
+
+    public Integer getQtdVitorias() {
+        if (qtdVitorias == null) {
+            return 0;
+        } else {
+            return qtdVitorias;
+        }
+    }
 }
