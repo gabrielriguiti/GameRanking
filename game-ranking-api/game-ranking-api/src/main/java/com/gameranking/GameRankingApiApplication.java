@@ -1,4 +1,4 @@
-package com.gameranking.gamerankingapi;
+package com.gameranking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
